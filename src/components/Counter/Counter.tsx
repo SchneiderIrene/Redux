@@ -1,23 +1,42 @@
 
 import Button from 'components/Button/Button';
-import { CounterProps } from './types'; 
 import { CounterWrapper, ButtonControl, CounterResult } from './styles';
+import { useState } from 'react';
 
 
 
 
 
-function Counter({countValue, onMinusClick, onPlusClick, disabledMinus, disabledPlus}: CounterProps) {
+function Counter() {
   
+  const [value, setValue] = useState<number>(0);
+
+const onMinusClick =  ()=>{
+    setValue(prevValue => parseFloat((prevValue-1).toFixed(2)))
+};
+
+const onPlusClick =  ()=>{
+  setValue(prevValue => parseFloat((prevValue+1).toFixed(2)))
+};
+
+const onMultyplyClick =  ()=>{
+    setValue(prevValue => parseFloat((prevValue*2).toFixed(2)))
+}
+
+const onDivideClick =  ()=>{
+  setValue(prevValue => parseFloat((prevValue/2).toFixed(2)));
+}
 
   return (
     <CounterWrapper>
       <ButtonControl>
-        <Button onButtonClick={onMinusClick} name="-" disabled={disabledMinus}/>
+        <Button onButtonClick={onMinusClick} name="-"/>
+        <Button onButtonClick={onDivideClick} name="/"/>
       </ButtonControl>
-      <CounterResult>{countValue}</CounterResult>
+      <CounterResult>{value}</CounterResult>
       <ButtonControl>
-        <Button onButtonClick={onPlusClick} name="+" disabled={disabledPlus}/>
+        <Button onButtonClick={onPlusClick} name="+" />
+        <Button onButtonClick={onMultyplyClick} name="*" />
       </ButtonControl>
     </CounterWrapper>
   );
