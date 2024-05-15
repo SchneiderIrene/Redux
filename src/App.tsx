@@ -1,8 +1,8 @@
-import Homework16 from "homeworks/Homework16/Homework16";
+import Homework17 from "homeworks/Homework17/Homework17";
 
 const App = () => {
   return (
-  <Homework16/>
+  <Homework17/>
 )
 }
 
