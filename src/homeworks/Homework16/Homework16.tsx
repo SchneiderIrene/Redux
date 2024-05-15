@@ -1,8 +1,12 @@
 import Counter from "components/Counter/Counter";
+import {Homework16Container} from './styles'
 
 function Homework16(){
     return (
-    <Counter/>
+        <Homework16Container>
+           <Counter/> 
+        </Homework16Container>
+    
     )
 }
 
