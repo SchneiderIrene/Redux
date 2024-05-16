@@ -5,7 +5,7 @@ import Button from "components/Button/Button"
 
 import { HomePageWrapper, UserForm, UserFormName } from "./styles"
 import { useAppDispatch } from "store/hooks";
-import { usersSliceActions } from "store/redux/users/userSlice";
+import { usersSliceActions } from 'store/redux/users/usersSlice'
 import { v4 } from "uuid";
 
 function Home() {

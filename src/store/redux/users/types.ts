@@ -1,10 +1,10 @@
 export interface UserData {
-  id: string
-  firstlastName: string
-  age: string
+  id: string,
+  firstlastName: string,
+  age: string,
   jobTitle: string
 }
 
-export interface UserSliceState {
+export interface UsersSliceState {
   users: UserData[]
 }
