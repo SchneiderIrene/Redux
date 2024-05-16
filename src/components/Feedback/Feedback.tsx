@@ -2,7 +2,7 @@ import { SlLike,  SlDislike } from "react-icons/sl";
 
 import Button from "components/Button/Button";
 
-import {FeedbackContainer, FeedbackResultContainer, LikeDislikeContainer, Result, IconBox, ButtonBox} from './styles'
+import {FeedbackContainer, FeedbackResultContainer, LikeDislikeContainer, Result, IconBox} from './styles'
 import { feedbackSliceActions, feedbackSliceSelectors } from "store/redux/feedback/feedbackSlice";
 import { useAppDispatch, useAppSelector } from "store/hooks";
 
@@ -29,19 +29,15 @@ function Feedback() {
     <FeedbackContainer>
       <FeedbackResultContainer>
         <LikeDislikeContainer>
-          <ButtonBox onClick={onLike}>
-            <IconBox>
+            <IconBox onClick={onLike}>
              <SlLike/>
           </IconBox>
-          </ButtonBox>
           <Result>{countLike}</Result>
         </LikeDislikeContainer>
-        <LikeDislikeContainer>
-          <ButtonBox onClick={onDislike}>
-            <IconBox>
+        <LikeDislikeContainer>     
+            <IconBox onClick={onDislike}>
                <SlDislike />
-            </IconBox>
-          </ButtonBox>
+            </IconBox>       
           <Result>{countDislike}</Result>
         </LikeDislikeContainer>
       </FeedbackResultContainer>

@@ -7,7 +7,7 @@ export const FeedbackContainer = styled.div`
     gap: 40px;
     width: 600px;
     padding: 30px;
-    background: rgb(218, 217, 228);
+    background: rgb(255, 0, 255, 0.5);
 ` 
 
 export const FeedbackResultContainer = styled.div`
@@ -25,7 +25,7 @@ export const FeedbackResultContainer = styled.div`
 
   export const Result = styled.div`
     font-size: 34px;
-    color: rgb(19, 29, 66);
+    color: black;
     font-weight: bold;
     border: 2px solid black;
     border-radius: 50%;
@@ -34,6 +34,7 @@ export const FeedbackResultContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    /* background-color: rgba(128, 0, 128); */
   `
    
     export const IconBox = styled.div`
@@ -43,14 +44,10 @@ export const FeedbackResultContainer = styled.div`
     align-items: center;
     justify-content: center;
     padding: 20px;
-    `
-
-    export const ButtonBox = styled.button`
-    background-color: rgb(218, 217, 228);;
-    border: none;
     cursor: pointer;
 
-    :hover{
-      transform: scale(1.1);
-    }
+:hover{
+  transform: scale(1.1);
+}
     `
+
