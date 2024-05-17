@@ -14,8 +14,9 @@ export const UsersSlice = createAppSlice({
         addUser: create.reducer((state: UsersSliceState, action: PayloadAction<UserData>)=> {
             state.users = [...state.users, action.payload]
         }),
-        addCard: create.reducer((state: UsersSliceState)=>{
-            state.users = state.users
+        deleteAllUsers: create.reducer(()=> usersInitionalState),
+        deleteUser: create.reducer((state: UsersSliceState, action: PayloadAction<string>)=>{
+            state.users = state.users.filter((user)=>user.id !== action.payload)
         })
         }), 
         selectors:{

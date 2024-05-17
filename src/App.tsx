@@ -1,3 +1,6 @@
+// import Cons18 from "cons/Cons18";
+
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import Layout from "pages/UsersApp/Layout/Layout"
@@ -6,6 +9,11 @@ import Users from "pages/UsersApp/Users/Users"
 
 const App = () => {
   return (
+  // <>
+  // <Cons18/>
+  // </>
+ 
+
   <BrowserRouter>
   <Layout>
     <Routes>
@@ -15,7 +23,8 @@ const App = () => {
     </Routes>
   </Layout>
   </BrowserRouter>
-)
+
+ )
 }
 
 export default App;

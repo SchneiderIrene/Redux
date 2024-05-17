@@ -18,8 +18,14 @@ function Home() {
       age: "",
       jobTitle: "",
     },
-    onSubmit: (values) => {
-      dispach(usersSliceActions.addUser({...values, id: v4()}))
+    onSubmit: (values, helpers) => {
+      if(!!values.firstlastName && !!values.age && !!values.jobTitle){
+        dispach(usersSliceActions.addUser({...values, id: v4()}))
+      } else {
+        alert('Please fill in all the fields')
+      }
+      helpers.resetForm()
+      //formik.resetForm() так тоже можно 
     },
   })
 

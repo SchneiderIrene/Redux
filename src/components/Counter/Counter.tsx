@@ -1,7 +1,6 @@
 
 import Button from 'components/Button/Button';
 import { CounterWrapper, ButtonControl, CounterResult } from './styles';
-import { useState } from 'react';
 import { useAppDispatch, useAppSelector } from 'store/hooks';
 import { counterSliceSelectors, counterSliceActions } from 'store/redux/counter/counterSlice';
 
@@ -11,10 +10,17 @@ import { counterSliceSelectors, counterSliceActions } from 'store/redux/counter/
 
 function Counter() {
 
+  // Вариант контроля компонента через redux
+  //8. Забираем значение count из стора
+
 const count = useAppSelector(counterSliceSelectors.count);
 
+//9. Создать функцию dispatch, которая диспачить экшен
 const dispatch = useAppDispatch();
 
+
+//10. Создаём функции, которые будут диспатчить определённые экшены в
+  // ответ на действия эшен криэйтеров (кнопок)
 const onPlus = ()=>{
   dispatch(counterSliceActions.add())
 }

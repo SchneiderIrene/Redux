@@ -13,7 +13,8 @@ export default defineConfig({
       'lessons': path.resolve(__dirname, 'src/lessons'),
       'pages': path.resolve(__dirname, 'src/pages'),
       'store': path.resolve(__dirname, 'src/store'),
-      'styles': path.resolve(__dirname, 'src/styles')
+      'styles': path.resolve(__dirname, 'src/styles'),
+      'cons': path.resolve(__dirname, 'src/cons')
     },
   },
   server: {
