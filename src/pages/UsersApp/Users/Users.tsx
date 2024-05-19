@@ -2,7 +2,6 @@ import { useAppDispatch, useAppSelector } from "store/hooks";
 import { UsersPageWrapper, UserCard, Paragraph } from "./styles"
 import { UsersSlice, usersSliceActions, usersSliceSelectors } from "store/redux/users/usersSlice";
 import { UserData, UsersSliceState } from "store/redux/users/types";
-import { v4 } from "uuid";
 import Button from "components/Button/Button";
 
 function Users() {
