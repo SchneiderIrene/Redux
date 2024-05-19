@@ -1,5 +1,5 @@
 // import Cons18 from "cons/Cons18";
-import Lesson19 from "lessons/Lesson19/Lesson19";
+import ActivityRandomizer from "components/ActivityRandomizer/ActivityRandomizer";
 
 
 // import { BrowserRouter, Routes, Route } from 'react-router-dom'
@@ -13,7 +13,7 @@ const App = () => {
   // <>
   // <Cons18/>
   // </>
- <Lesson19/>
+ <ActivityRandomizer/>
 
   // <BrowserRouter>
   // <Layout>
