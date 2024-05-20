@@ -2,7 +2,6 @@ import { createAppSlice } from "store/createAppSlice"
 import { ActivityRandomizerSliceState } from "./types"
 import { create } from "domain"
 import { PayloadAction } from "@reduxjs/toolkit"
-import { v4 } from "uuid";
 
 const activityRandomizerInitialState: ActivityRandomizerSliceState = {
   data: [],
@@ -43,7 +42,7 @@ export const activityRandomizerSlice = createAppSlice({
           state.data = [
             ...state.data,
             {
-              id: v4(),
+              id: action.payload?.key,
               activity: action.payload?.activity,
               type: action.payload?.type,
             },

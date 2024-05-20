@@ -3,7 +3,6 @@ import { ActivityRandomizerContainer, ButtonBox, ActivityBox, ActivityBoxContain
 import Spinner from "components/Spinner/Spinner";
 import { useAppDispatch, useAppSelector } from "store/hooks";
 import { activityRandomizerSliceActions, activityRandomizerSliceSelectors } from "store/redux/activityRandomizer/activityRandomizerSlice";
-import { v4 } from "uuid";
 
 function ActivityRandomizer(){
 
