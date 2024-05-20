@@ -1,5 +1,5 @@
-// import Cons18 from "cons/Cons18";
-import Lesson19 from "lessons/Lesson19/Lesson19";
+import Cons18 from "cons/Cons18";
+// import Lesson19 from "lessons/Lesson19/Lesson19";
 
 
 // import { BrowserRouter, Routes, Route } from 'react-router-dom'
@@ -10,10 +10,10 @@ import Lesson19 from "lessons/Lesson19/Lesson19";
 
 const App = () => {
   return (
-  // <>
-  // <Cons18/>
-  // </>
- <Lesson19/>
+  <>
+  <Cons18/>
+  </>
+
 
   // <BrowserRouter>
   // <Layout>

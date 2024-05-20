@@ -8,6 +8,7 @@ export interface InputProps {
   label?: string;
   value: string;
   error?: string | undefined;
+  checked?: boolean;
   onInputChange?: (event: ChangeEvent<HTMLInputElement>) => void;
   onBlur?: (e: FocusEvent<any,Element>)=>void
 }
