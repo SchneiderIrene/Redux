@@ -3,6 +3,7 @@ import { ActivityRandomizerContainer, ButtonBox, ActivityBox, ActivityBoxContain
 import Spinner from "components/Spinner/Spinner";
 import { useAppDispatch, useAppSelector } from "store/hooks";
 import { activityRandomizerSliceActions, activityRandomizerSliceSelectors } from "store/redux/activityRandomizer/activityRandomizerSlice";
+import { useEffect } from "react";
 
 function ActivityRandomizer(){
 
@@ -34,6 +35,14 @@ const activities = data.map((activity)=>{
 const deleteAllActivity = ()=>{
     dispatch(activityRandomizerSliceActions.deleteAllActivity());
 }
+
+
+useEffect(() => {
+    if (error) {
+      alert('Error response')
+    }
+  }, [error])
+
 
     return (
         <ActivityRandomizerContainer>

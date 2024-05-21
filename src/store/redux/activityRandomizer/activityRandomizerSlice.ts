@@ -2,6 +2,7 @@ import { createAppSlice } from "store/createAppSlice"
 import { ActivityRandomizerSliceState } from "./types"
 import { create } from "domain"
 import { PayloadAction } from "@reduxjs/toolkit"
+import { v4 } from "uuid";
 
 const activityRandomizerInitialState: ActivityRandomizerSliceState = {
   data: [],
@@ -14,23 +15,17 @@ export const activityRandomizerSlice = createAppSlice({
   initialState: activityRandomizerInitialState,
   reducers: create => ({
     getActivity: create.asyncThunk(
-      async (arg, thunkApi) => {
+      async (arg, {rejectWithValue}) => {
 
-        try {
+       
           const response = await fetch(" https://www.boredapi.com/api/activity")
           const result = await response.json()
   
           if (!response.ok) {
-            thunkApi.fulfillWithValue(result)
+            return rejectWithValue(result)
           } else {
             return result
           }
-          
-        } catch (error) {
-          return thunkApi.rejectWithValue(error);
-        }
-
-    
       },
       {
         pending: (state: ActivityRandomizerSliceState) => {
@@ -42,7 +37,7 @@ export const activityRandomizerSlice = createAppSlice({
           state.data = [
             ...state.data,
             {
-              id: action.payload?.key,
+              id: v4(),
               activity: action.payload?.activity,
               type: action.payload?.type,
             },
@@ -51,7 +46,6 @@ export const activityRandomizerSlice = createAppSlice({
         rejected: (state: ActivityRandomizerSliceState, action: any) => {
           state.status = "error"
           state.error = action.payload
-          alert("Network error");
         },
       },
     ),
