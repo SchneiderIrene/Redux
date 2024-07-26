@@ -37,11 +37,11 @@ const deleteAllActivity = ()=>{
 }
 
 
-useEffect(() => {
-    if (error) {
+ useEffect(()=>{
+    if (error){
       alert('Error response')
     }
-  }, [error])
+ }, [error])
 
 
     return (

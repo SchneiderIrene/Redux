@@ -20,7 +20,7 @@ export const activityRandomizerSlice = createAppSlice({
        
           const response = await fetch("https://www.boredapi.com/api/activity")
           const result = await response.json()
-           console.log(response);
+          
            
           if (!response.ok) {
             return rejectWithValue(result)
